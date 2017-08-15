@@ -1,1 +1,1 @@
-A Face Recognition Ateendance System developed using python.
+A Face Recognition Attendance System developed using python.
