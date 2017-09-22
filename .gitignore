@@ -1,0 +1,5 @@
+*.db
+*.pkl
+*.pyc
+*.csv
+tests/insert_students_detail.py
