@@ -1,0 +1,1 @@
+This folder contains the attendance of a class in CSV format.

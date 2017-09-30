@@ -1,0 +1,1 @@
+This folder contains the face encodings of the students of a class as a pickle.
