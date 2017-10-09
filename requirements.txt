@@ -1,0 +1,8 @@
+numpy
+cv2
+tqdm
+face_recognition
+pickle
+sqlite3
+csv
+
