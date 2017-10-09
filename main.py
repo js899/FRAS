@@ -6,7 +6,7 @@ import sys, os
 import modules.attendance_module
 import modules.add_students_module
 import modules.view_attendance_module
-
+import modules.img_to_pickle_module
 
 menu_actions  = {}
 
@@ -56,6 +56,7 @@ def view_attendance():
 
 def img_to_pickle():
     modules.img_to_pickle_module.itp()
+    menu_actions['main_menu']()
     return
 
 

@@ -3,3 +3,4 @@
 *.pyc
 *.csv
 tests/insert_students_detail.py
+Image_data
