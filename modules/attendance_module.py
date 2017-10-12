@@ -27,7 +27,7 @@ def attendance(semester, branch):
     	ret,frame = cap.read()
 
     	frame = cv2.flip(frame,1)
-    	frame = cv2.copyMakeBorder(frame,0,0,100,0,cv2.BORDER_CONSTANT,value=[0,0,0])
+    	frame = cv2.copyMakeBorder(frame,0,0,150,0,cv2.BORDER_CONSTANT,value=[0,0,0])
 
     	small_frame = cv2.resize(frame, (0,0), fx=0.25, fy=0.25)
 
@@ -77,8 +77,10 @@ def attendance(semester, branch):
 
 
 def am():
-    semester = raw_input("Enter Semester (I,II,III,IV,V,VI,VII,VIII) : ")
+
     branch = raw_input("Enter Branch (CS,MM,ME,EC,EE,CE) : ")
+    semester = raw_input("Enter Semester (I,II,III,IV,V,VI,VII,VIII) : ")
+
     present_students = attendance(semester, branch)
     print "\tNo of students present : {}".format(len(present_students))
     print "\tDate : ",dt.datetime.today()

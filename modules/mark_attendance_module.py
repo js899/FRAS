@@ -22,14 +22,14 @@ def mam(semester, branch, present_students, d, m, y):
     	values = values + " ) "
     	create_table = 'CREATE TABLE {0} {1};'.format(table_name,values)
     	atten.execute(create_table)
-    try:
-        all_students = stud.execute('SELECT * FROM {}'.format(branch+"_"+semester)).fetchall()
-    except:
-        print "Student Details Missing in student database in the database folder."
-        return
-	for s in all_students:
-		st = s[0]
-		atten.execute("INSERT INTO {}('RegNo') VALUES(?)".format(table_name),(st,) )
+        try:
+            all_students = stud.execute('SELECT * FROM {}'.format(branch+"_"+semester)).fetchall()
+        except:
+            print "Student Details Missing in student database in the database folder."
+            return
+    	for s in all_students:
+    		st = s[0]
+    		atten.execute("INSERT INTO {}('RegNo') VALUES(?)".format(table_name),(st,) )
     for regno in present_students:
         update_command = "UPDATE {} SET {} = 'P' WHERE RegNo=?".format(table_name,"'"+d+"/"+m+"/"+y+"'")
         atten.execute(update_command, (regno,))
