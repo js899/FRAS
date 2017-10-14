@@ -4,7 +4,7 @@ import csv
 def vam():
     branch = raw_input("Enter Branch (CS,EE,EC,MM,ME,CE) : ")
     semester = raw_input("Enter Semester (I,II,III,IV,V,VI,VII,VII) : ")
-    month = raw_input("Enter Month (1,2,3,4,56,7,8,9,10,11,12) : ")
+    month = raw_input("Enter Month (1,2,3,4,5,6,7,8,9,10,11,12) : ")
     year = raw_input("Enter Year : ")
 
     try :

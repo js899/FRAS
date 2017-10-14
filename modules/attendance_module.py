@@ -29,7 +29,7 @@ def attendance(semester, branch):
     	frame = cv2.flip(frame,1)
     	frame = cv2.copyMakeBorder(frame,0,0,150,0,cv2.BORDER_CONSTANT,value=[0,0,0])
 
-    	small_frame = cv2.resize(frame, (0,0), fx=0.25, fy=0.25)
+    	small_frame = cv2.resize(frame, (0,0), fx=1, fy=1)
 
     	faces = []
 
@@ -38,8 +38,8 @@ def attendance(semester, branch):
 
     	for face_en in face_encodings:
     		distances = face_recognition.face_distance(student_encodings,face_en)
-    		index, value = min(enumerate(distances), key=operator.itemgetter(1))
-    		if(value<=0.47):
+    		index, difference = min(enumerate(distances), key=operator.itemgetter(1))
+    		if(difference<=0.5):
     		    faces.append(students[index][1])
     		    present.append(students[index][1])
     		else:
@@ -47,10 +47,10 @@ def attendance(semester, branch):
 
     	if(len(faces)>0):
     		for (top,right,bottom,left),regno in zip(face_locations, faces):
-    			top = top*4
-    			right = right*4
-    			bottom = bottom*4
-    			left = left*4
+    			top = top
+    			right = right
+    			bottom = bottom
+    			left = left
 
     			color = (0,0,255)
 
