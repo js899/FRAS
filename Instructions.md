@@ -1,6 +1,6 @@
 # Instructions to execute :
   1. Install all the [required packages](https://github.com/ritesh-nitjsr/FRAS/blob/master/requirements.txt)
-  2. Add images to the folder .Image_data/&lt;branch&gt;/&lt;semester&gt;
+  2. Add images to the folder ./Image_data/&lt;branch&gt;/&lt;semester&gt;
       * &lt;branch&gt; is one of the strings : CS,EE,EC,CE,MM,ME
       * &lt;semester&gt; is one the following strings : I,II,III,IV,V,VI,VII,VIII
       * The name of images must be according to the convention :  &lt;Year of admission&gt;&lt;Course Type&gt;&lt;Branch&gt;&lt;Roll Number&gt; &lt;index&gt;
