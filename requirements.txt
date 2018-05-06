@@ -1,5 +1,5 @@
 numpy
-cv2
+cv2 2.4.13
 tqdm
 face_recognition
 pickle
